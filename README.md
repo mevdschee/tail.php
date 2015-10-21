@@ -1,6 +1,6 @@
 # tail.php
 
-Tails a remote file over telnet using a PHP script.
+Tail (follow) a remote file using a PHP script and telnet 
 
 ```
 $ telnet localhost 80
