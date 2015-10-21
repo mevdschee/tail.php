@@ -9,7 +9,7 @@ fseek($stream, 0, SEEK_END);
 echo str_repeat("\n",4500)."\e[s$title";
 flush();
 while(true){
-  $data = stream_get_contents($stream,-1);
+  $data = stream_get_contents($stream);
   if ($data) {
     echo "\e[32m\e[u".$data."\e[s".str_repeat("\e[m",1500)."$title";
     flush();
