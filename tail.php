@@ -1,7 +1,10 @@
 <?php
+// configuration
 $file = '/var/log/apache2/access.log';
+$ip = '127.';
+// start of script
 $title = "\e[H\e[2K$file";
-if (strpos($_SERVER['REMOTE_ADDR'],'127.')!==0) die('Access Denied');
+if (strpos($_SERVER['REMOTE_ADDR'],$ip)!==0) die('Access Denied');
 $stream = fopen($file, 'r');
 if (!$stream) die("Could not open file: $file\n");
 echo "\e[m\e[2J";
